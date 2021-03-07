@@ -10,7 +10,7 @@ With this script 15 files can be morphologically tagged and converted to sentenc
 ```bash
 export NUM_PROC=15
 
-find "$USER_ROOT/$DATA_DIR" -type f | xargs -I% -P $NUM_PROC -n 1 \
+find "$USER_ROOT/$DATA_DIR" -maxdepth 1 -type f | xargs -I% -P $NUM_PROC -n 1 \
   mvn exec:java -Dexec.mainClass="zemberek.examples.morphology.DisambiguateSentencesMultiple" \
     -Dexec.args="% true true true"
 ```
