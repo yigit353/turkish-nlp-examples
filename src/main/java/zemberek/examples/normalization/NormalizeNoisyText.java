@@ -24,7 +24,7 @@ public class NormalizeNoisyText {
     // Example: https://drive.google.com/drive/folders/1tztjRiUs9BOTH-tb1v7FWyixl-iUpydW
     // download lm and normalization folders to some local directory.
 
-    Path zemberekDataRoot = Paths.get("/home/aaa/zemberek-data");
+    Path zemberekDataRoot = Paths.get("data");
 
     Path lookupRoot = zemberekDataRoot.resolve("normalization");
     Path lmPath = zemberekDataRoot.resolve("lm/lm.2gram.slm");

@@ -1,4 +1,7 @@
 ***** STATS *****
 Number of Sentences:	9443
-Number of Unknown Containing Sentences:	1127
-Rate of Unknown Containing Sentences:	11.934767
+Number of Words:	164058
+Number of Unknown Containing Sentences:	483
+Rate of Unknown Containing Sentences:	5.1149
+Number of Unknown Words:	650
+Rate of Unknown Words:	0.39620134
