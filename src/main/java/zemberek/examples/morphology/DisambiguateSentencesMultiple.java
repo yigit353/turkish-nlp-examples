@@ -89,6 +89,7 @@ public class DisambiguateSentencesMultiple {
                     sentence = sentence.replace(">", " büyüktür ");
                     sentence = sentence.replace("<", " küçüktür ");
                 }
+                sentence = sentence.strip();
 
                 if (sentence.length() == 0) {
                     if (writeTags) {
@@ -100,7 +101,13 @@ public class DisambiguateSentencesMultiple {
 
                 sentence = fixSpacingOfCharInText("-", sentence);
                 sentence = fixSpacingOfCharInText("*", sentence);
-                sentence = normalizer.normalize(sentence);
+
+                String beforeNormalization = sentence;
+                try {
+                    sentence = normalizer.normalize(sentence);
+                } catch (Exception e){
+                    sentence = beforeNormalization;
+                }
 
                 List<WordAnalysis> analyses = morphology.analyzeSentence(sentence);
                 SentenceAnalysis result = morphology.disambiguate(sentence, analyses);

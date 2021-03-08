@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="turkish-nlp-examples" target="1.8" />
+      <module name="turkish-nlp-examples" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
